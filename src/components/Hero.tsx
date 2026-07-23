@@ -8,7 +8,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onScrollToProjects }) => {
   return (
-    <section id="top" className="pt-36 md:pt-40 pb-16 md:pb-20 relative overflow-hidden">
+    <section id="top" className="pt-10 md:pt-14 pb-16 md:pb-20 relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex flex-col gap-6 max-w-3xl">
           {/* Tag Badge */}

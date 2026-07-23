@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenResume, onOpenContact }) =
   };
 
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[#fcf9f8]/85 backdrop-blur-md border-b border-[#ddc1b3]">
+    <nav className="sticky top-0 w-full z-50 bg-[#fcf9f8] border-b border-[#ddc1b3] shadow-2xs">
       <div className="flex justify-between items-center max-w-[1200px] mx-auto px-6 h-20">
         {/* Brand Title */}
         <a 
