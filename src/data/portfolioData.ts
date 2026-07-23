@@ -10,6 +10,7 @@ export const PERSONAL_INFO = {
   email: 'dalmi.seo@example.com',
   phone: '010-1234-5678',
   location: '서울특별시 성동구',
+  profileImage: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800',
   linkedIn: 'https://linkedin.com',
   github: 'https://github.com',
   certifications: [
