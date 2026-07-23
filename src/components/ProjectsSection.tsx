@@ -3,6 +3,7 @@ import { PROJECTS } from '../data/portfolioData';
 import { Project } from '../types';
 import { ChevronRight, CheckCircle2, ArrowRight, Layers, FileText, Sparkles } from 'lucide-react';
 import { GrowthMetricsChart } from './GrowthMetricsChart';
+import { AnimatedValue } from './AnimatedCounter';
 
 interface ProjectsSectionProps {
   onSelectProject: (project: Project) => void;
@@ -215,7 +216,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
                   </div>
                   <div className="flex justify-between mt-1.5 text-xs font-semibold text-[#564338]">
                     <span>사용성 중심 설계</span>
-                    <span className="text-[#974400]">85% 달성</span>
+                    <span className="text-[#974400] font-bold">
+                      <AnimatedValue value="85%" /> 달성
+                    </span>
                   </div>
                 </div>
 

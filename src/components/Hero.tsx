@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowDown, Sparkles, Volume2, Phone, Mail, MapPin, ExternalLink, RefreshCw, GraduationCap, TrendingUp, Cpu, Users, Star } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import { AnimatedValue } from './AnimatedCounter';
 
 interface HeroProps {
   onScrollToProjects: () => void;
@@ -128,7 +129,9 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToProjects }) => {
               </div>
               <div>
                 <span className="text-[10px] text-stone-500 font-bold block">조회수 성과</span>
-                <span className="text-xs font-extrabold text-emerald-600">+34% 상승</span>
+                <span className="text-xs font-extrabold text-emerald-600">
+                  <AnimatedValue value="+34%" /> 상승
+                </span>
               </div>
             </motion.div>
 
@@ -192,7 +195,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToProjects }) => {
               className="absolute top-1/2 -right-8 sm:-right-12 z-20 bg-[#974400] text-white p-2 px-3 rounded-full shadow-lg flex items-center gap-1.5 text-xs font-bold"
             >
               <Star className="w-3.5 h-3.5 text-amber-300 fill-amber-300" />
-              <span>이탈률 -12%p</span>
+              <span>이탈률 <AnimatedValue value="-12%p" /></span>
             </motion.div>
 
             <div 
@@ -348,12 +351,12 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToProjects }) => {
           {PERSONAL_INFO.heroAchievements.map((item, index) => (
             <div
               key={index}
-              className="bento-card p-6 rounded-2xl flex flex-col justify-center border border-[#ddc1b3] bg-white hover:border-[#974400]/40 transition-all"
+              className="bento-card p-6 rounded-2xl flex flex-col justify-center border border-[#ddc1b3] bg-white hover:border-[#974400]/40 transition-all shadow-xs hover:shadow-md group cursor-default"
             >
-              <span className="text-[#974400] font-bold text-4xl sm:text-5xl mb-1 tracking-tight">
-                {item.value}
+              <span className="text-[#974400] font-extrabold text-4xl sm:text-5xl mb-1 tracking-tight group-hover:scale-105 transition-transform origin-left">
+                <AnimatedValue value={item.value} />
               </span>
-              <span className="text-[#564338] font-medium text-sm sm:text-base">
+              <span className="text-[#564338] font-semibold text-sm sm:text-base">
                 {item.label}
               </span>
             </div>
