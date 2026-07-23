@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #974400;
+  --color-primary-hover: #7a3700;
+  --color-primary-container: #bb5808;
+  --color-primary-fixed: #ffdbc9;
+  --color-on-primary-fixed: #321200;
+  --color-on-primary: #ffffff;
+  --color-background: #fcf9f8;
+  --color-surface: #fcf9f8;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container: #f0eded;
+  --color-surface-container-high: #eae7e7;
+  --color-surface-container-highest: #e4e2e1;
+  --color-on-surface: #1b1c1c;
+  --color-on-surface-variant: #564338;
+  --color-outline: #8a7266;
+  --color-outline-variant: #ddc1b3;
+}
+
+@layer base {
+  body {
+    background-color: #fcf9f8;
+    color: #1b1c1c;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+.bento-card {
+  background: #ffffff;
+  border: 1px solid #ddc1b3;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(151, 68, 0, 0.08);
+  transform: translateY(-2px);
+}
+
